@@ -7,6 +7,6 @@ class Halfling < Race
     @speed = 7.50;
     @language = "Halfling";
     
-    @statistics.dexterity = 2;
+    @statistics.dexMod = 2;
   end
 end

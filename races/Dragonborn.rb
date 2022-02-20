@@ -7,7 +7,7 @@ class Dragonborn < Race
     @speed = 9;
     @language = "Draconic";
 
-    @statistics.strength = 2;
-    @statistics.charisma = 1;
+    @statistics.strMod = 2;
+    @statistics.chaMod = 1;
   end
 end

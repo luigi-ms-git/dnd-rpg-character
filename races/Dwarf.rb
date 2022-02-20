@@ -7,6 +7,6 @@ class Dwarf < Race
     @speed = 7.50;
     @language = "Dwarf";
     
-    @statistics.constituition = 2;
+    @statistics.conMod = 2;
   end
 end

@@ -1,17 +1,18 @@
-require_relative 'Attributes';
+require_relative '../RpgClass';
 
-class RpgClass
-  attr_accessor :hitDice, :proeficiencies, :equipment, :attributes;
-
+class Cleric < RpgClass
   def initialize
-    @hitDice = String.new();
-    @proeficiencies = Hash.new();
-    @equipment = Array.new();
-    @attributes = Attributes.new();
+    super();
+    @hitDice = "1d8";
+    @equipment = ["mace", "leather armor", "light crossbow", "priest pack", "shield"];
 
-    @proeficiencies["armor"] = String.new();
-    @proeficiencies["weapons"] = Array.new();
-    @proeficiencies["saving-throws"] = Array.new();
-    @proeficiencies["skills"] = Array.new();
+    @statistics.wisdom = 15;
+    @statistics.constituition = 14;
+    @statistics.strength = 13;
+
+    @proeficiencies["armor"] = "light armor";
+    @proeficiencies["weapons"] = ["simple weapons"];
+    @proeficiencies["saving-throws"] = ["wisdom", "charisma"];
+    @proeficiencies["skills"] = ["Religion", "History"];
   end
 end

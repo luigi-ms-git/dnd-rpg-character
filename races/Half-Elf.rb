@@ -7,6 +7,6 @@ class HalfElf < Race
     @speed = 9.00;
     @language = "Elvish";
 
-    @statistics.charisma = 2;
+    @statistics.chaMod = 2;
   end
 end

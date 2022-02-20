@@ -7,6 +7,6 @@ class Elf < Race
     @speed = 9.00;
     @language = "Elvish";
     
-    @statistics.dexterity = 2;
+    @statistics.dexMod = 2;
   end
 end

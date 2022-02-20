@@ -7,6 +7,6 @@ class Gnome < Race
     @speed = 7.50;
     @language = "Gnome";
     
-    @statistics.intelligence = 2;
+    @statistics.intMod = 2;
   end
 end

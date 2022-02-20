@@ -7,7 +7,7 @@ class HalfOrc < Race
     @speed = 9.00;
     @language = "Orc";
     
-    @statistics.strength = 2;
-    @statistics.constituition = 1;
+    @statistics.strMod = 2;
+    @statistics.conMod = 1;
   end
 end

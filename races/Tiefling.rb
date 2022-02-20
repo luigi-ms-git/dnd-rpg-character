@@ -7,7 +7,7 @@ class Tiefling < Race
     @speed = 9.00;
     @language = "Infernal";
     
-    @statistics.charisma = 2;
-    @statistics.intelligence = 1;
+    @statistics.chaMod = 2;
+    @statistics.intMod = 1;
   end
 end

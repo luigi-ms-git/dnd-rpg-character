@@ -7,11 +7,11 @@ class Human < Race
     @speed = 9.00;
     @language = "Common";
     
-    @statistics.strength = 1;
-    @statistics.constituition = 1;
-    @statistics.dexterity = 1;
-    @statistics.intelligence = 1;
-    @statistics.wisdom = 1;
-    @statistics.charisma = 1;
+    @statistics.strMod = 1;
+    @statistics.conMod = 1;
+    @statistics.dexMod = 1;
+    @statistics.intMod = 1;
+    @statistics.wisMod = 1;
+    @statistics.chaMod = 1;
   end
 end

@@ -11,6 +11,7 @@ class RpgClass
 
     @proeficiencies["armor"] = String.new();
     @proeficiencies["weapons"] = Array.new();
+    @proeficiencies["tools"] = Array.new();
     @proeficiencies["saving-throws"] = Array.new();
     @proeficiencies["skills"] = Array.new();
   end

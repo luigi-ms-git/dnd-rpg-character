@@ -1,17 +1,18 @@
-require_relative 'Attributes';
+require_relative '../RpgClass';
 
-class RpgClass
-  attr_accessor :hitDice, :proeficiencies, :equipment, :attributes;
-
+class Rogue < RpgClass
   def initialize
-    @hitDice = String.new();
-    @proeficiencies = Hash.new();
-    @equipment = Array.new();
-    @attributes = Attributes.new();
+    super();
+    @hitDice = "1d8";
+    @equipment = ["rapier", "shortsword", "burglar pack", "leather armor"];
 
-    @proeficiencies["armor"] = String.new();
-    @proeficiencies["weapons"] = Array.new();
-    @proeficiencies["saving-throws"] = Array.new();
-    @proeficiencies["skills"] = Array.new();
+    @statistics.dexterity = 15;
+    @statistics.intelligence = 14;
+
+    @proeficiencies["armor"] = "light armor";
+    @proeficiencies["weapons"] = ["simple weapons", "hand crossbows", "rapiers", "longswords", "shortswords"];
+    @proeficiencies["saving-throws"] = ["dexterity", "intelligence"];
+    @proeficiencies["tools"] = ["thieves tools"];
+    @proeficiencies["skills"] = ["Stealth", "Perception", "Performance", "Acrobatics"];
   end
 end

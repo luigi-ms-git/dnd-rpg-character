@@ -1,17 +1,18 @@
-require_relative 'Attributes';
+require_relative '../RpgClass';
 
-class RpgClass
-  attr_accessor :hitDice, :proeficiencies, :equipment, :attributes;
-
+class Druid < RpgClass
   def initialize
-    @hitDice = String.new();
-    @proeficiencies = Hash.new();
-    @equipment = Array.new();
-    @attributes = Attributes.new();
+    super();
+    @hitDice = "1d8";
+    @equipment = ["wooden shield", "scimitar", "explorer pack"];
 
-    @proeficiencies["armor"] = String.new();
-    @proeficiencies["weapons"] = Array.new();
-    @proeficiencies["saving-throws"] = Array.new();
-    @proeficiencies["skills"] = Array.new();
+    @statistics.wisdom = 15;
+    @statistics.constituition = 14;
+
+    @proeficiencies["armor"] = "light armor";
+    @proeficiencies["weapons"] = ["quarterstaffs", "daggers"];
+    @proeficiencies["tools"] = ["herbalism kit"];
+    @proeficiencies["saving-throws"] = ["intelligence", "wisdom"];
+    @proeficiencies["skills"] = ["Nature", "Perception"];
   end
 end
