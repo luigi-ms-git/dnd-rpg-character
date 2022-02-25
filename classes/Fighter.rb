@@ -8,6 +8,10 @@ class Fighter < RpgClass
 
     @statistics.strength = 15;
     @statistics.intelligence = 14;
+    @statistics.constituition = 13;
+    @statistics.dexterity = 12;
+    @statistics.charisma = 10;
+    @statistics.wisdom = 8;
 
     @proeficiencies["armor"] = "any armor";
     @proeficiencies["weapons"] = "martial weapons";

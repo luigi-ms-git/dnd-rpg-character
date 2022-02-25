@@ -8,6 +8,10 @@ class Barbarian < RpgClass
 
     @statistics.strength = 15;
     @statistics.constituition = 14;
+    @statistics.dexterity = 13;
+    @statistics.wisdom = 12;
+    @statistics.charisma = 10;
+    @statistics.intelligence = 8;
 
     @proeficiencies["armor"] = "light armor";
     @proeficiencies["weapons"] = ["simple weapons", "martial weapons"];

@@ -7,7 +7,11 @@ class Druid < RpgClass
     @equipment = ["wooden shield", "scimitar", "explorer pack"];
 
     @statistics.wisdom = 15;
-    @statistics.constituition = 14;
+    @statistics.charisma = 14;
+    @statistics.intelligence = 13;
+    @statistics.constituition = 12;
+    @statistics.dexterity = 10;
+    @statistics.strength = 8;
 
     @proeficiencies["armor"] = "light armor";
     @proeficiencies["weapons"] = ["quarterstaffs", "daggers"];

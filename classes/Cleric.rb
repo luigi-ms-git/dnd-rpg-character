@@ -9,6 +9,9 @@ class Cleric < RpgClass
     @statistics.wisdom = 15;
     @statistics.constituition = 14;
     @statistics.strength = 13;
+    @statistics.charisma = 12;
+    @statistics.intelligence = 10;
+    @statistics.dexterity = 8;
 
     @proeficiencies["armor"] = "light armor";
     @proeficiencies["weapons"] = ["simple weapons"];

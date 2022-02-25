@@ -8,6 +8,10 @@ class Warlock < RpgClass
 
     @statistics.charisma = 15;
     @statistics.constituition = 14;
+    @statistics.dexterity = 13;
+    @statistics.intelligence = 12;
+    @statistics.wisdom = 10;
+    @statistics.strength = 8;
 
     @proeficiencies["armor"] = "light armor";
     @proeficiencies["weapons"] = ["simple weapons"];

@@ -8,6 +8,10 @@ class Paladin < RpgClass
 
     @statistics.strength = 15;
     @statistics.charisma = 14;
+    @statistics.constituition = 13;
+    @statistics.dexterity = 12;
+    @statistics.wisdom = 10;
+    @statistics.intelligence = 8;
 
     @proeficiencies["armor"] = "any armor";
     @proeficiencies["weapons"] = ["simple weapons", "martial weapons"];

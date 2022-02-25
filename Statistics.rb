@@ -2,32 +2,36 @@ class Statistics
   attr_accessor :strength, :constituition, :dexterity, :intelligence, :wisdom, :charisma, :strMod, :conMod, :dexMod, :intMod, :wisMod, :chaMod;
 
   def initialize
-    @strength = 0;
-    @strMod = 0;
-    @constituition = 0;
-    @conMod = 0;
-    @dexterity = 0;
-    @dexMod = 0;
-    @intelligence = 0;
-    @intMod = 0;
-    @wisdom = 0;
-    @wisMod = 0;
-    @charisma = 0;
-    @chaMod = 0;
+    @strength = [0, 0];
+    @constituition = [0, 0];
+    @dexterity = [0, 0];
+    @intelligence = [0, 0];
+    @wisdom = [0, 0];
+    @charisma = [0, 0];
   end
 
   def to_h()
     return { 'strength': @strength,
-             'strMod': @strMod,
              'constituition': @constituition, 
-             'conMod': @conMod,
              'dexterity': @dexterity, 
-             'dexMod': @dexMod,
              'intelligence': @intelligence, 
-             'intMod': @intMod,
              'wisdom': @wisdom, 
-             'wisMod': @wisMod,
-             'charisma': @charisma, 
-             'chaMod': @chaMod };
+             'charisma': @charisma };
+  end
+
+  def getModifiers()
+    mods = {};
+
+    to_h().each { |key, value| mods[key] = value[1] };
+
+    return mods;
+  end
+
+  def filterModifiers()
+    stats = {};
+
+    to_h().each { |key, value| stats[key] = value[0] };
+
+    return stats;
   end
 end

@@ -8,6 +8,10 @@ class Monk < RpgClass
 
     @statistics.dexterity = 15;
     @statistics.wisdom = 14;
+    @statistics.constituition = 13;
+    @statistics.strength = 12;
+    @statistics.intelligence = 10;
+    @statistics.charisma = 8;
 
     @proeficiencies["weapons"] = ["simple weapons", "shortswords"];
     @proeficiencies["saving-throws"] = ["strength", "dexterity"];

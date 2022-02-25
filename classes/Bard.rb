@@ -8,6 +8,10 @@ class Bard < RpgClass
 
     @statistics.charisma = 15;
     @statistics.dexterity = 14;
+    @statistics.constituition = 13;
+    @statistics.wisdom = 12;
+    @statistics.intelligence = 10;
+    @statistics.strength = 8;
 
     @proeficiencies["armor"] = "light armor";
     @proeficiencies["weapons"] = ["Hand crossbows", "longswords"];

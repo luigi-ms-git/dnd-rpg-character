@@ -8,6 +8,10 @@ class Wizard < RpgClass
 
     @statistics.intelligence = 15;
     @statistics.dexterity = 14;
+    @statistics.wisdom = 13;
+    @statiatics.charisma = 12;
+    @statistics.dexterity = 10;
+    @statistics.strength = 8;
 
     @proeficiencies["weapons"] = ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"];
     @proeficiencies["saving-throws"] = ["intelligence", "wisdom"];
