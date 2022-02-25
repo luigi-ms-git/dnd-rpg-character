@@ -6,12 +6,12 @@ class Rogue < RpgClass
     @hitDice = "1d8";
     @equipment = ["rapier", "shortsword", "burglar pack", "leather armor"];
 
-    @statistics.dexterity = 15;
-    @statistics.intelligence = 14;
-    @statistics.charisma = 13;
-    @statistics.constituition = 12;
-    @statistics.strength = 10;
-    @statistics.wisdom = 8;
+    @statistics.dexterity[0] = 15;
+    @statistics.intelligence[0] = 14;
+    @statistics.charisma[0] = 13;
+    @statistics.constituition[0] = 12;
+    @statistics.strength[0] = 10;
+    @statistics.wisdom[0] = 8;
 
     @proeficiencies["armor"] = "light armor";
     @proeficiencies["weapons"] = ["simple weapons", "hand crossbows", "rapiers", "longswords", "shortswords"];

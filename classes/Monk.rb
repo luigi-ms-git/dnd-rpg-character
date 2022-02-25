@@ -6,12 +6,12 @@ class Monk < RpgClass
     @hitDice = "1d8";
     @equipment = ["shortsword", "dungeoneer pack", "10 darts"];
 
-    @statistics.dexterity = 15;
-    @statistics.wisdom = 14;
-    @statistics.constituition = 13;
-    @statistics.strength = 12;
-    @statistics.intelligence = 10;
-    @statistics.charisma = 8;
+    @statistics.dexterity[0] = 15;
+    @statistics.wisdom[0] = 14;
+    @statistics.constituition[0] = 13;
+    @statistics.strength[0] = 12;
+    @statistics.intelligence[0] = 10;
+    @statistics.charisma[0] = 8;
 
     @proeficiencies["weapons"] = ["simple weapons", "shortswords"];
     @proeficiencies["saving-throws"] = ["strength", "dexterity"];

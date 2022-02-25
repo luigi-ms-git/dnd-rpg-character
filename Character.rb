@@ -1,8 +1,6 @@
 require_relative 'Statistics';
 require_relative 'Race';
 require_relative 'RpgClass';
-require_relative 'classes/Ranger';
-require_relative 'races/Half-Elf';
 
 class Character
   attr_accessor :name, :level, :class, :race, :statistics;
@@ -15,14 +13,28 @@ class Character
     @statistics = Statistics.new();
   end
 
+  def to_h()
+    return { 'name': @name,
+    'level': @level,
+    'race': @race.class.name,
+    'class': @class.class.name,
+    'age': @race.age.to_s.concat(" yr"),
+    'size': @race.size.to_s.concat(" m"),
+    'speed': @race.speed.to_s.concat(" m/s"),
+    'language': @race.language,
+    'proeficiencies': @class.proeficiencies,
+    'equipment': @class.equipment,
+    'stats': @statistics.to_h
+    };
+  end
+
   def setRaceStats()
     raceStats = @race.statistics.getModifiers();
     
     raceStats.each do |key, value|
-      aux = @statistics.instance_variable_get("@#{key}");
-      aux[1] = value;
+      stat = @statistics.instance_variable_get("@#{key}")[0];
 
-      @statistics.instance_variable_set("@#{key}", aux);
+      @statistics.instance_variable_set("@#{key}", [stat, value]);
     end
   end
 
@@ -30,10 +42,9 @@ class Character
     classStats = @class.statistics.filterModifiers();
 
     classStats.each do |key, value|
-      aux = @statistics.instance_variable_get("@#{key}");
-      aux[0] = value;
+      mod = @statistics.instance_variable_get("@#{key}")[1];
       
-      @statistics.instance_variable_set("@#{key}", aux);
+      @statistics.instance_variable_set("@#{key}", [value, mod]);
     end
   end
 
@@ -44,17 +55,17 @@ class Character
     emptyMods.each do |key, value|
       case value[0]
       when 8
-        emptyMods[key] = [8, -1]
+        emptyMods[key][1] = -1;
       when 10
-        emptyMods[key] = [10, 0]
+        emptyMods[key][1] = 0;
       when 12
-        emptyMods[key] = [12, 1]
+        emptyMods[key][1] = 1;
       when 13
-        emptyMods[key] = [13, 1]
+        emptyMods[key][1] = 1;
       when 14
-        emptyMods[key] = [14, 2]
+        emptyMods[key][1] = 2;
       when 15
-        emptyMods[key] = [15, 2]
+        emptyMods[key][1] = 2;
       end
     end
 
@@ -63,14 +74,3 @@ class Character
     end
   end
 end
-
-c = Character.new('Luidriel');
-
-c.class = Ranger.new();
-c.race = HalfElf.new();
-
-c.setRaceStats();
-c.setClassStats();
-c.fullfillStatsMods();
-
-p c.statistics.to_h;

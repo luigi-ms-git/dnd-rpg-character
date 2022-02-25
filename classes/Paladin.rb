@@ -6,12 +6,12 @@ class Paladin < RpgClass
     @hitDice = "1d10";
     @equipment = ["martial weapon + shield", "melee weapon", "explorer pack", "chain mail"];
 
-    @statistics.strength = 15;
-    @statistics.charisma = 14;
-    @statistics.constituition = 13;
-    @statistics.dexterity = 12;
-    @statistics.wisdom = 10;
-    @statistics.intelligence = 8;
+    @statistics.strength[0] = 15;
+    @statistics.charisma[0] = 14;
+    @statistics.constituition[0] = 13;
+    @statistics.dexterity[0] = 12;
+    @statistics.wisdom[0] = 10;
+    @statistics.intelligence[0] = 8;
 
     @proeficiencies["armor"] = "any armor";
     @proeficiencies["weapons"] = ["simple weapons", "martial weapons"];

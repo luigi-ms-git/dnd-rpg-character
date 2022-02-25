@@ -3,10 +3,11 @@ require_relative '../Race';
 class Dwarf < Race
   def initialize()
     super();
-    @size = "Medium";
+    @age = 50;
+    @size = 1.35;
     @speed = 7.50;
     @language = "Dwarf";
     
-    @statistics.conMod = 2;
+    @statistics.constituition[1] = 2;
   end
 end

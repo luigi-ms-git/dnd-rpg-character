@@ -6,12 +6,12 @@ class Sorcerer < RpgClass
     @hitDice = "1d6";
     @equipment = ["simple weapon", "arcane focus", "explorer pack", "2 daggers"];
 
-    @statistics.charisma = 15;
-    @statistics.constituition = 14;
-    @statistics.wisdom = 13;
-    @statistics.dexterity = 12;
-    @statistics.intelligence = 10;
-    @statistics.strength = 8;
+    @statistics.charisma[0] = 15;
+    @statistics.constituition[0] = 14;
+    @statistics.wisdom[0] = 13;
+    @statistics.dexterity[0] = 12;
+    @statistics.intelligence[0] = 10;
+    @statistics.strength[0] = 8;
 
     @proeficiencies["weapons"] = ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"];
     @proeficiencies["saving-throws"] = ["constituition", "charisma"]
